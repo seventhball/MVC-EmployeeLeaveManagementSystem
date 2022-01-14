@@ -11,9 +11,41 @@ build_property.RootNamespace = ASP.NETMVC
 build_property.ProjectDir = C:\Users\Seventhball\source\repos\ASP.NETMVC\ASP.NETMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Seventhball\source\repos\ASP.NETMVC\ASP.NETMVC
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/AppliedLeaves/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGllZExlYXZlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/EmployeeLeaves/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVMZWF2ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/EmployeeLeaves/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVMZWF2ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/EmployeeView/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVWaWV3XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/Employee/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/Employee/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcV2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Seventhball/source/repos/ASP.NETMVC/ASP.NETMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=

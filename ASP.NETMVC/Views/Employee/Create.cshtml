@@ -1,0 +1,34 @@
+﻿
+@model ASP.NETMVC.Models.Employee;
+
+<h1 style= "color:black">
+    Fill Form to Create Account
+</h1>
+
+@using (Html.BeginForm("Create","Employee"))
+{   
+    <div class="form-group">
+        @Html.LabelFor(m=>m.FirstName, new {style="color:black"})
+        @Html.TextBoxFor(m=>m.FirstName, new { @class="form-control"})
+       @Html.ValidationMessageFor(m=>m.FirstName) 
+</div>
+<div class="form-group">
+         @Html.LabelFor(m=>m.LastName, new {style="color:black"})
+        @Html.TextBoxFor(m=>m.LastName, new { @class="form-control"})
+         @Html.ValidationMessageFor(m=>m.LastName) 
+        </div>
+        <div class="form-group">
+         @Html.LabelFor(m=>m.EmailId, new {style="color:black"})
+        @Html.TextBoxFor(m=>m.EmailId, new { @class="form-control"})
+         @Html.ValidationMessageFor(m=>m.EmailId) 
+        </div>
+        <div class="form-group">
+         @Html.LabelFor(m=>m.Password, new {style="color:black"})
+        @Html.PasswordFor(m=>m.Password, new { @class="form-control"})
+         @Html.ValidationMessageFor(m=>m.Password) 
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+    <p>Already have an account? <a asp-controller="Employee" asp-action="Login" >Sign In</a></p>
+}

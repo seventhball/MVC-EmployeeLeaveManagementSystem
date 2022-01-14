@@ -1,0 +1,134 @@
+﻿<link href="~/js~/js/jquery-ui.min.css" rel="stylesheet" />
+
+@model ASP.NETMVC.ViewModel.EmployeeViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color:black"> Employee Leave Data</h1>   
+
+<div>
+    <table class="table table-bordered table-hover" style="border-block-color:black">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveHeader.firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveHeader.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveHeader.TotalLeaves)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveHeader.TotalAppliedLeaves)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveHeader.RemainingLeaves)
+            </th>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.employeeLeaveHeader.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.employeeLeaveHeader.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.employeeLeaveHeader.TotalLeaves)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.employeeLeaveHeader.TotalAppliedLeaves)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem =>modelItem.employeeLeaveHeader.RemainingLeaves)
+
+            </td>
+
+        </tr>
+
+    </table>
+</div>
+
+
+
+
+
+<div>
+    <table class="table table-bordered table-hover" style="border-block-color:black">
+        <tr>
+          @*  <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveDetail.FirstOrDefault().ApplyId)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveDetail.FirstOrDefault().AppliedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveDetail.FirstOrDefault().FromDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveDetail.FirstOrDefault().ToDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeeLeaveDetail.FirstOrDefault().NoOfLeave)
+            </th>
+        </tr>
+
+        @if (Model.employeeLeaveDetail.Count > 0)
+        {
+            @foreach (var item in Model.employeeLeaveDetail)
+            {
+                <tr>
+                  @*  <td>
+                        @Html.DisplayFor(modelItem =>item.ApplyId)
+                    </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem =>item.AppliedOn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem =>item.FromDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ToDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoOfLeave)
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td>
+                    <h3> No Entry Available</h3>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+ <a asp-controller="AppliedLeaves" asp-action="Index" class="btn btn-primary">Apply</a>
+@* @Html.ActionLink("Apply Leave","Index","AppliedLeaves", new {id=Model.employeeLeaveHeader.EmployeeId} , new {@class="btn btn-primary"})*@
+
+
+@section scripts{
+<script src="~/lib/jquery/dist~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function (){
+     $(".datepicker").datepicker({;
+     dateFormat:"dd-mm-yy",
+      minDate: -0,
+      maxDate: "+0M +4D"
+    showOn:"both "
+     });
+    });
+</script>
+}
+
+@*  @Html.TextBoxFor(model => model.Start, new { @type="date", @class =
+    "form-control datepicker",
+    @Value = Model.Start.ToString("yyyy-MM-dd") } )*@
+

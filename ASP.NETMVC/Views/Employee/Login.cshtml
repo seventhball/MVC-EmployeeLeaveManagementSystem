@@ -1,0 +1,24 @@
+﻿@model ASP.NETMVC.Models.Login;
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 style="color:black">
+   Login 
+</h1>
+@using (Html.BeginForm("Login","Employee"))
+{    @Html.ValidationSummary()
+    <div class="form-group">
+         @Html.LabelFor(m=>m.EmailId, new {style="color:black"})
+        @Html.TextBoxFor(m=>m.EmailId, new { @class="form-control"})
+         @Html.ValidationMessageFor(m=>m.EmailId) 
+        </div>
+        <div class="form-group">
+         @Html.LabelFor(m=>m.Password, new {style="color:black"})
+        @Html.PasswordFor(m=>m.Password, new { @class="form-control"})
+         @Html.ValidationMessageFor(m=>m.Password) 
+        </div>
+        <br />
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Login</button>
+          </div>              
+}

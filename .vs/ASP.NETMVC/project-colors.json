@@ -1,6 +1,11 @@
 {
   "Version": 1,
   "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
     "5c9a1e38-b327-4a64-add8-ccbb84abafec": {
       "ProjectGuid": "5c9a1e38-b327-4a64-add8-ccbb84abafec",
       "DisplayName": "ASP.NETMVC",

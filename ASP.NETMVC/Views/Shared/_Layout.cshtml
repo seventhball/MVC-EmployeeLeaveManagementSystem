@@ -21,11 +21,30 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                             </li> 
+                              <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Create">Login/SignUp</a>
+                       
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                       @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Create">Login/SignUp</a>
+                        </li>*@
                     </ul>
+                    @if(Context.Session.GetString("EmployeeId")!=null)
+                    {
+                      <ul class="navbar-nav d-flex justify-content-end">
+                            <li class="nav-item" >
+                            <a  asp-controller="Employee" asp-action="Logout" class="btn btn-primary">Logout</a>
+                            </li>
+                            
+                        </ul>
+                    }
+                    else
+                    {
+                       
+                    }
+
+                       
                 </div>
             </div>
         </nav>

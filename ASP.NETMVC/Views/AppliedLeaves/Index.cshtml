@@ -1,0 +1,25 @@
+﻿@model ASP.NETMVC.Models.AppliedLeaveModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    @using (Html.BeginForm("Save","EmployeeView"))
+    {
+        <div class="form-group"> 
+            @Html.LabelFor(m=>m.FromDate, new {style="color:black"})
+           @Html.TextBoxFor(model => model.FromDate, new { @class = "form-control input-sm datepicker", @type = "date",
+           min = DateTime.Today.ToString("yyyy-MM-dd") })
+            @Html.ValidationMessageFor(m=>m.FromDate)
+            @Html.LabelFor(m=>m.ToDate, new {style="color:black"})
+         @Html.TextBoxFor(model => model.ToDate, new { @class = "form-control input-sm datepicker", @type = "date", placeholder = "Date of Birth", id = "txtContactDOB", 
+         min = DateTime.Today.ToString("yyyy-MM-dd") })
+          @Html.ValidationMessageFor(m=>m.ToDate)
+            <div class="form-group">
+            <br />
+            <input type="submit" class="btn btn-primary" name="Submit">
+            </div>
+        </div>
+    }
+</div>
+
